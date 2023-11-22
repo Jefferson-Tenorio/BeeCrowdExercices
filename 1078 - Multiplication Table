@@ -1,0 +1,44 @@
+// Anwser of Chat GPT 3.5 - With tips on portuguese.
+
+// Constantes para os limites
+const int MinValue = 2;
+const int MaxValue = 10000;
+const int Multiples = 10;
+
+if (int.TryParse(Console.ReadLine(), out int i) && i > MinValue && i < MaxValue)
+{
+    int controler = 1;
+
+    // Imprimir a tabuada usando interpolação de strings
+    while (controler <= Multiples)
+    {
+        Console.WriteLine($"{controler} x {i} = {i * controler}");
+        controler++;
+    }
+}
+
+
+///
+1 Comentários:
+Adicionar comentários ao código pode ajudar outros desenvolvedores (e você mesmo, no futuro) a entender o propósito de cada seção do código.
+
+2 Uso de Constante para Limites:
+Pode ser útil utilizar constantes para os limites (2 e 10000) em vez de números literais no código. Isso torna mais claro o propósito desses números e facilita a manutenção futura.
+
+3 Formato de Saída:
+Utilizar interpolação de strings ($"{variável}") pode ser mais legível do que Console.WriteLine com placeholders {}.
+///
+
+// My code as a begginer .NET dev:
+
+int i; 
+
+if ( int.TryParse(Console.ReadLine(), out i) && i > 1 && i < 10000)
+{
+    int controler = 1;
+    while (controler < 11)
+    {
+        Console.WriteLine("{0} x {1} = {2}", controler, i, i * controler);
+        controler++;
+    }
+}

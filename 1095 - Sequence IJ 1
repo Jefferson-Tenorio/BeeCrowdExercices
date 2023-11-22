@@ -1,0 +1,13 @@
+// Anwser of Chat GPT 3.5 - With tips on portuguese.
+
+///
+
+///
+
+// My code as a begginer .NET dev:
+int i = 1;
+for (int j = 60; j >= 0; j -= 5)
+{
+    Console.WriteLine($"I={i} J={j}");
+    i += 3;
+}

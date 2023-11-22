@@ -1,0 +1,45 @@
+// Anwser of Chat GPT 3.5 - With tips on portuguese.
+
+int evenNumbers = 0; // Variável para contar os números pares
+const int MaxIterations = 5; // Número máximo de iterações
+const int ParNumber = 2; // Número que representa um número par
+
+for (int timer = 0; timer < MaxIterations; timer++)
+{
+    // Solicitação do usuário para inserir um número e verifica se é um número par
+    if (int.TryParse(Console.ReadLine(), out int i) && i % ParNumber == 0)
+    {
+        evenNumbers++; // Incrementa o contador de números pares
+    }
+}
+
+Console.WriteLine($"{evenNumbers} valores pares");
+
+///
+1 Comentários Descritivos:
+Adicionar comentários ao código para explicar o propósito de cada seção pode ajudar a tornar o código mais compreensível.
+
+2 Uso de Constante para Número Par:
+Para garantir mais clareza no código, pode-se utilizar uma constante para representar o número par (no caso, o número 2).
+
+3 Uso de Loop for em vez de while:
+Se o objetivo é iterar um número específico de vezes, o uso de um loop for pode ser mais adequado.
+///
+
+// My code as a begginer .NET dev:
+
+int evenNumbers = 0; //variavel para contar os numeros pares
+int timer = 0;
+const int maxTime = 5; //limite de vezes que ira se repetir
+
+while (timer < maxTime)
+{
+    // solita ao usuario um numero e se ele for divisivel por dois ele adcionar um na variavel contadora evenNumbers.
+    if (int.TryParse(Console.ReadLine(), out int i) && i % 2 == 0)
+    { 
+        evenNumbers++;
+    }
+    timer++; //incremento na variavel condicional do loop
+}
+
+Console.WriteLine($"{evenNumbers} valores pares");

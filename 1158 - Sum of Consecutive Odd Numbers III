@@ -1,0 +1,61 @@
+// Anwser of Chat GPT 3.5 - With tips on portuguese.
+if (int.TryParse(Console.ReadLine(), out int atEnd))
+{
+    for (int i = 0; i < atEnd; i++)
+    {
+        string numbers = Console.ReadLine();
+        string[] ab = numbers.Split();
+
+        if (ab.Length != 2 || !int.TryParse(ab[0], out int odd) || !int.TryParse(ab[1], out int caseTests))
+        {
+            continue;
+        }
+
+        int sumOfOdds = 0;
+        int currentOdd = odd;
+
+        for (int j = 0; j < caseTests; j++)
+        {
+            if (currentOdd % 2 != 0)
+            {
+                sumOfOdds += currentOdd;
+            }
+            currentOdd += 1;
+        }
+        
+        Console.WriteLine(sumOfOdds);
+    }
+}
+
+///
+Este trecho de código lê um número (atEnd) indicando quantos conjuntos de teste serão realizados. Cada conjunto de teste consiste em um par de números: o primeiro número (odd) representa um número ímpar inicial, e o segundo número (caseTests) indica quantos números ímpares consecutivos, a partir do número inicial, devem ser somados.
+
+No entanto, há um erro de lógica no segundo loop (for) onde a variável j não está sendo incrementada corretamente. Além disso, a soma dos ímpares é exibida dentro do loop de teste, o que não parece ser a lógica desejada.
+
+Foi corrigido o loop interno (for) para que j seja incrementado corretamente a cada iteração.
+A soma dos números ímpares agora é exibida fora do loop interno, após todos os números ímpares do conjunto de teste terem sido somados corretamente.
+///
+
+// My code as a begginer .NET dev:
+int.TryParse(Console.ReadLine(), out int close); // solicita quantas vezes será executado os testes.
+int odd, caseTests, sumOfOdds = 0; //variavéis que serão usadas, nessa ordem: impar, quantos dos numeros impares, soma dos numeros impares. 
+
+for (int i = 0; i <= close - 1; i++) // um loop que será até o "close". Ou seja, quantas vezes será executado o programa.
+{
+    string numbers = Console.ReadLine(); // soliticita o usuario uma string que será convertida em duas variaveis.
+    string[] ab = numbers.Split(); //split a string "numbers", criando uma lista "ab[]".
+
+    if (ab.Length != 2 || !int.TryParse(ab[0], out odd) || !int.TryParse(ab[1], out caseTests)) //Confirma se (1) a lista ab[] tem no máximo dois valores. (2) atribui a ab[0] a var "odd", (3) atribui a ab[1] a var "caseTestts".
+    {
+        continue;
+    }
+
+    for ( int j = 0; j <= caseTests-1;) //quantas vezes será executado a soma dos numeros impares.
+    {
+        if (odd % 2 != 0) { sumOfOdds += odd;j++;}; //soma os numeros impares e soma 1 ao contador.
+        odd += 1; //soma até que a condição acima seja completada.
+    }
+    Console.WriteLine(sumOfOdds);
+    sumOfOdds = 0; //reseta o variavel para uma outra utilização.
+
+}

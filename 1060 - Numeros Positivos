@@ -1,0 +1,44 @@
+// Anwser of Chat GPT 3.5 - With tips on portuguese.
+
+
+int timer = 1; // Declaração da variável contadora
+int positive = 0; // Declaração da variável que contará entradas de números positivos
+const int MaxIterations = 6; // Número máximo de iterações
+
+while (timer <= MaxIterations)
+{
+    // Solicitação do usuário para inserir um número e verifica se é válido
+    if (float.TryParse(Console.ReadLine(), out float i) && i > 0)
+    {
+        positive++; // Incrementa o contador de valores positivos
+    }
+    timer++; // Incrementa o contador de iterações
+}
+
+Console.WriteLine($"{positive} valores positivos");
+
+///
+1 Redução de Verificações Redundantes:
+Se o objetivo for apenas contar números positivos diferentes de zero, você pode eliminar a verificação i != 0, já que a condição i > 0 já contempla essa condição.
+2 Uso de Prefixo '++':
+Para incrementar a variável positive, você pode usar o operador de incremento ++ diretamente.
+///
+
+// My code as a begginer .NET dev:
+
+int timer = 1; // declaração da variavel contadora
+int positive = 0; // declaração da variavel que contara entrada de numeros positivos
+
+while (timer < 7)
+{
+    if (float.TryParse(Console.ReadLine(), out float i) && i != 0) // variavel de entrada do usuario - i - que devera ser diferente de zero.
+    {
+        if ( i > 0) // interação de valores positivos
+        {
+            positive++; 
+        }
+    }
+    timer++;
+}
+
+Console.WriteLine($"{positive} valores positivos");

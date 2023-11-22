@@ -1,0 +1,27 @@
+// Anwser of Chat GPT 3.5 - With tips on portuguese.
+
+///
+
+///
+
+// My code as a begginer .NET dev:
+string inputNumbers = Console.ReadLine();
+string[] abc = inputNumbers.Split( );
+
+if (abc.Length == 3 &&
+    int.TryParse(abc[0], out int a) &&
+    int.TryParse(abc[1], out int b) &&
+    int.TryParse(abc[2], out int c) &&
+    a >= 1 && a <= 1000 &&
+    b >= 1 && b <= 1000 &&
+    c >= 1 && c <= 1000)
+{
+    if (a - b == 0 ||
+        a - c == 0 ||
+        c - b == 0 ||
+        a+b - c == 0 ||
+        a+c - b == 0 ||
+        b+c - a == 0)
+    { Console.WriteLine("S");}
+    else { Console.WriteLine("N");}
+}

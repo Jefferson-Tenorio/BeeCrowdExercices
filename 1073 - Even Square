@@ -1,0 +1,33 @@
+// Anwser of Chat GPT 3.5 - With tips on portuguese.
+// Solicitação do usuário para inserir um número
+int maxTime = Convert.ToInt32(Console.ReadLine());
+
+for (int time = 2; time <= maxTime; time += 2)
+{
+    int squared = time * time;
+    Console.WriteLine($"{time} ^ 2 = {squared}");
+}
+
+///
+1 Comentários Descritivos:
+Adicionar comentários pode ajudar a explicar o propósito de cada parte do código.
+
+2 Utilizar um loop for em vez de while:
+Se o objetivo é iterar sobre um intervalo específico, o uso de um loop for pode ser mais claro.
+
+3 Melhorar a Lógica de Verificação de Números Pares:
+Uma verificação direta para verificar se o número é par pode simplificar o código
+///
+
+// My code as a begginer .NET dev:
+int time = 2;
+int maxTime = Convert.ToInt32(Console.ReadLine());
+
+while (time <= maxTime)
+{
+    if ((time % 2) == 0)
+    {
+        Console.WriteLine($"{time} ^ 2 = {time * time} ");
+    }
+    time++;
+}

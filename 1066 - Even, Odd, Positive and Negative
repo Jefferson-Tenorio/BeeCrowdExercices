@@ -1,0 +1,38 @@
+// Anwser of Chat GPT 3.5 - With tips on portuguese.
+int positives = 0, negatives = 0, odds = 0, even = 0;
+
+for (int i = 0; i < 5; i++)
+{
+    if (int.TryParse(Console.ReadLine(), out int input))
+    {
+        even += input % 2 == 0 ? 1 : 0;
+        odds += input % 2 != 0 ? 1 : 0;
+        positives += input > 0 ? 1 : 0;
+        negatives += input < 0 ? 1 : 0;
+    }
+}
+
+///
+1 Uso de operador ternário: Em vez de usar múltiplos blocos if, você pode considerar o uso de operadores ternários para tornar o código mais conciso e legível.
+2 Comentários Descritivos: Adicionar comentários explicativos pode ajudar na compreensão do código por outras pessoas que venham a revisá-lo ou mantê-lo.
+///
+
+// My code as a begginer .NET dev:
+int positives = 0, negatives = 0, odds = 0, even = 0;
+
+for (int i = 0; i < 5; i++)
+{
+    if (int.TryParse(Console.ReadLine(), out int input))
+    {
+        if (input % 2 == 0){even += 1;}
+        else (input % 2 != 0){odds += 1;}
+        if (input > 0){positives += 1;}
+        else (input < 0){negatives += 1;}
+    }
+}
+
+
+Console.WriteLine($"{even} valor(es) par(es)");
+Console.WriteLine($"{odds} valor(es) impar(es)");
+Console.WriteLine($"{positives} valor(es) positivo(s)");
+Console.WriteLine($"{negatives} valor(es) negativo(s)");

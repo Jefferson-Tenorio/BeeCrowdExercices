@@ -1,0 +1,52 @@
+// Anwser of Chat GPT 3.5 - With tips on portuguese.
+
+
+int controler;
+if (int.TryParse(Console.ReadLine(),out controler) && controler <= 10000)
+{
+    int i = 1;
+    while( i <= controler)
+    {
+        string numbers = Console.ReadLine();
+        string[] ABnum = numbers.Split( );
+        if ( ABnum.Length == 2 && int.TryParse(ABnum[0],out int a) && int.TryParse(ABnum[1], out int b)
+            {
+            Console.WriteLine(a + b);
+            }
+        i++;
+
+    }
+
+}
+
+/// 
+1 Validação de Entrada:
+Verificar se a entrada está correta antes de processar os valores. Por exemplo, garantir que os números inseridos sejam válidos e que o número de pares não ultrapasse 10000.
+
+2 Melhoria do Loop:
+Use um loop while em vez de um loop for, pois pode ser mais eficiente em algumas situações.
+
+3 Utilização de TryParse:
+Ao invés de usar int.Parse, utilize int.TryParse para evitar exceções caso a entrada não seja um número.
+///
+
+// My code as a begginer .NET dev:
+
+    static void Main(string[] args) { 
+
+       int controler = int.Parse(Console.ReadLine());
+
+        if (controler <= 10000)
+        {
+            for (int i = 1; i <= controler; i++) 
+            {
+                string numbers = Console.ReadLine();
+                string[] ABnum = numbers.Split();
+                int a = int.Parse(ABnum[0]);
+                int b = int.Parse(ABnum[1]);
+        
+                Console.WriteLine(a + b);
+            }
+        }
+
+    }

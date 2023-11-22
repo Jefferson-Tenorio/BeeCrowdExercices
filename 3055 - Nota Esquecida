@@ -1,0 +1,11 @@
+// Anwser of Chat GPT 3.5 - With tips on portuguese.
+cant give a code diferent of my. 
+///
+
+///
+
+// My code as a begginer .NET dev:
+if (int.TryParse(Console.ReadLine(), out int note) && int.TryParse(Console.ReadLine(), out int media) && media >= 0 && note >= 0 && note <= 100 && media <= 100 )
+{
+    Console.WriteLine(media * 2 - note);
+}

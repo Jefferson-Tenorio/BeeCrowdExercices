@@ -1,0 +1,16 @@
+// Anwser of Chat GPT 3.5 - With tips on portuguese.
+
+///
+
+///
+
+// My code as a begginer .NET dev:
+    if (int.TryParse(Console.ReadLine(), out int a) && a >= 1 && a <= 2000)
+    {
+        for (int i = 0; i < a; i++)
+        {
+            Console.ReadLine(); 
+        }
+        Console.WriteLine("Ciencia da Computacao");
+    }
+    

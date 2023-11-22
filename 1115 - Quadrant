@@ -1,0 +1,60 @@
+// Anwser of Chat GPT 3.5 - With tips on portuguese.
+string numbers;
+int a, b;
+
+while ((numbers = Console.ReadLine()) != null && numbers != "0 0")
+{
+    string[] ab = numbers.Split();
+
+    if (ab.Length != 2 || !int.TryParse(ab[0], out a) || !int.TryParse(ab[1], out b))
+    {
+        // Lidar com entrada inválida (por exemplo, não são dois números inteiros)
+        Console.WriteLine("Entrada inválida. Insira dois números inteiros separados por um espaço.");
+        continue; // Pular esta iteração e continuar o loop
+    }
+
+    if (a > 0)
+    {
+        if (b > 0)
+            Console.WriteLine("primeiro");
+        else
+            Console.WriteLine("quarto");
+    }
+    else
+    {
+        if (b > 0)
+            Console.WriteLine("segundo");
+        else
+            Console.WriteLine("terceiro");
+    }
+}
+
+///
+1 Uso de int.TryParse para evitar exceções:
+Troque as conversões diretas (Convert.ToInt32) por int.TryParse para validar se os valores inseridos são realmente números inteiros, evitando assim possíveis exceções.
+
+2 Utilização de uma estrutura while mais clara:
+Substitua o loop while (true) por uma estrutura de loop mais explícita, utilizando uma condição que não seja sempre verdadeira. Por exemplo, você pode verificar se ambos os números não são iguais a zero para continuar o loop.
+
+3 Simplificação das condições dos quadrantes:
+Combine as condições dos quadrantes para reduzir o número de comparações.
+///
+
+// My code as a begginer .NET dev:
+while (true)
+{
+    string numbers = Console.ReadLine();
+    string[] ab = numbers.Split();
+
+    if (ab.Length != 2 || !int.TryParse(ab[0], out int a) || !int.TryParse(ab[1], out int b))
+    {
+        continue;
+    }
+
+    if (a == 0 || b == 0) {break;}
+    
+    if (a > 0 && b > 0) { Console.WriteLine("primeiro");}
+    else if (a > 0 && b < 0) { Console.WriteLine("quarto"); }
+    else if (a < 0 && b < 0) { Console.WriteLine("terceiro"); }
+    else if (a < 0 && b > 0) { Console.WriteLine("segundo"); }
+}
