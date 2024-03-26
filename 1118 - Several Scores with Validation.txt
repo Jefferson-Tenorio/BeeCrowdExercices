@@ -1,0 +1,59 @@
+bool run = true;
+while (run == true)
+{
+    decimal? noteOne = null;
+    decimal? noteTwo = null;
+    
+    while (noteOne == null)
+    {
+        noteOne = Convert.ToDecimal(Console.ReadLine());
+        if (noteOne >= 0 && noteOne <= 10)
+        {
+
+        }
+        else
+        {
+            Console.Error.WriteLine("nota Invalida");
+            noteOne = null;
+        }
+    }
+
+    while (noteTwo == null)
+    {
+        noteTwo = Convert.ToDecimal(Console.ReadLine());
+        if (noteTwo >= 0 && noteTwo <= 10)
+        {
+
+        }
+        else
+        {
+            Console.Error.WriteLine("nota Invalida");
+            noteTwo = null;
+        }
+    }
+
+    decimal? result = (noteOne + noteTwo) / 2;
+
+    if (result.HasValue)
+    {
+        string result1 = result.Value.ToString("0.00");
+        Console.WriteLine($"media = {result1}");
+    }
+
+    while (true)
+    {
+        Console.WriteLine("novo calculo (1-sim 2-nao)");
+        decimal select = Convert.ToDecimal(Console.ReadLine());
+
+        if(select == 1)
+        {
+            break;
+        }
+        else if(select == 2)
+        {
+            run = false;
+            break;
+        }
+    }
+
+}
