@@ -1,0 +1,32 @@
+using System; 
+using System.Linq;
+
+class URI {
+
+    static void Main(string[] args) { 
+ int count = 0;
+ int answer = int.TryParse(Console.ReadLine(), out int temp) && temp >= 1 && temp <= 4
+                  ? temp
+                  : throw new Exception("Número inválido. Deve estar entre 1 e 4.");
+
+ int choice;
+
+ 
+ string updateToList = Console.ReadLine();
+
+ int[] listAnswer = updateToList
+                     .Split(' ')
+                     .Select(s => int.TryParse(s, out int n) && n >= 1 && n <= 4 ? n : throw new Exception($"Valor inválido:"))
+                     .ToArray();
+
+ for (int i = 0; i <= 4; i++)
+ {
+     if (listAnswer[i] == answer)
+     {
+         count += 1;
+     }
+ }
+ Console.WriteLine(count);
+    }
+
+}
