@@ -1,0 +1,11 @@
+using System; 
+
+class URI {
+
+    static void Main(string[] args) { 
+
+            int answer = int.TryParse(Console.ReadLine(), out int result) && result >= 1 && result <= 1000 ? result * 4 : throw new Exception("");
+            Console.WriteLine(answer);
+    }
+
+}
